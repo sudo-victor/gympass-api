@@ -6,7 +6,7 @@ import { getDistanceBetweenCoordinates } from '@/usecases/utils/get-distance-bet
 export class InMemoryGymsRepository implements GymsRepository {
     public items: Gym[] = [];
 
-    async findManyNeabry(params: FindManyNearbyParams): Promise<{ id: string; title: string; description: string; phone: string; latitude: Prisma.Decimal; longitude: Prisma.Decimal; }[]> {
+    async findManyNearby(params: FindManyNearbyParams): Promise<{ id: string; title: string; description: string; phone: string; latitude: Prisma.Decimal; longitude: Prisma.Decimal; }[]> {
         return this.items
             .filter(item => {
                 const distance = getDistanceBetweenCoordinates(
