@@ -18,11 +18,11 @@ describe('Create Gym (e2e)', () => {
             .post('/gyms')
             .set('Authorization', `Bearer ${token}`)
             .send({
-                title: 'Javascript Gym',
-                description: 'Some description',
-                phone: '21999999999',
-                latitude: -22.9640629,
-                longitude: -43.404249,
+                'title': 'Javascript Gym',
+                'description': 'Some description',
+                'phone': '21999999999',
+                'latitude': -22.9640629,
+                'longitude': -43.404249,
             });
 
         expect(response.statusCode).toEqual(201);
